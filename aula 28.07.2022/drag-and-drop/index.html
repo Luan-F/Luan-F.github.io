@@ -42,18 +42,10 @@
             function drop(event) {
                 event.preventDefault();
                 let data = event.dataTransfer.getData("image/png");
-				console.log(event, data);
-				console.log(O(data).width);
-				let target_imgs = event.target;
-				console.log(target_imgs.childNodes);
-
-				event.target.appendChild(O(data));
+		if (event.target.id = "dest" || event.target.id == "src"){
+			event.target.appendChild(O(data));
+		}
             }
-
-			// img = (pos, width, height)
-			function detectCollision(img1, img2) {
-								
-			}
         </script>
     </body>
 </html>
