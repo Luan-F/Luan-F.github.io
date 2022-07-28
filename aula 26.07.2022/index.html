@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+    </head>
+    <body>
+        <script>
+            if (typeof navigator.geolocation == "undefined") {
+                alert("Não é possivel utilziar a geolocalização");
+            }
+            else {
+                navigator.geolocation.getCurrentPosition(granted, denied);
+            }
+
+            function granted(position) {
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
+
+                alert(`Lat: ${lat}\nLon:${lon}`);
+
+                window.location.replace(`https://www.google.com/maps/@${lat}, ${lon},8z`)
+            }
+
+            function denied(error) {
+                let message = error.code;
+                alert(message);
+            }
+        </script>
+    </body>
+</html>

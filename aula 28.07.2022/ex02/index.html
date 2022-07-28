@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tocando audio com OSC</title>
+        <script src="osc.js"></script>
+    </head>
+    <body>
+        <audio id="myaudio">
+            <source src="27_audio.m4a" type="audio/aac">
+            <source src="27_audio.mp3" type="audio/mp3">
+            <source src="27_audio.oga" type="audio/ogg">
+        </audio>
+        <button onclick="playaudio()">Play</button>
+        <button onclick="pauseaudio()">Pause</button>
+        <script>
+            function playaudio() {
+                O('myaudio').play();
+            }
+            function pauseaudio() {
+                O('myaudio').pause();
+            }
+        </script>
+    </body>
+</html>

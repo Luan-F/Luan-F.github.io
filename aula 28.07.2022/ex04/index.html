@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vídeo com OSC</title>
+        <script src="osc.js"></script>
+    </head>
+    <body>
+        <br><pre>
+        <video id="myvideo" width="560" height="360">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="27_movie.ogv" type="video/ogg">
+            <source src="27_movie.webm" type="video/webm">
+        </video>
+        <button onclick="playvideo()">Play</button>
+        <button onclick="pausevideo()">Pause</button>
+        <script>
+            function playvideo() {
+               O("myvideo").play();
+            }
+            
+            function pausevideo() {
+               O("myvideo").pause();
+            }
+        </script>
+    </body>
+</html>
